@@ -1,16 +1,15 @@
+import { useBetween } from 'use-between';
 import { Image, Overlay } from './components';
-import { useState } from 'react';
+import Audios, { useShareState } from './components/audio';
 import AkoVoice from './assets/audio/Ako_kawai.mp3';
-
 
 const Ako = require('./assets/images/ako.jpg');
 const link = process.env.REACT_APP_URL_AKO;
 
-
-
 function App() {
-  const [isShown, setIsShown] = useState<boolean>(false);
- 
+  const hoverEnter = () => setShowAudio(true);
+  const hoverLeave = () => setShowAudio(false);
+  const { setShowAudio } = useBetween(useShareState);
 
   return (
     <div className='App'>
@@ -21,9 +20,10 @@ function App() {
             height={'200px'}
             className='ako'
             href={link}
-            onMouseEnter={() => setIsShown(true)}
-            onMouseLeave={() => setIsShown(false)}
+            onMouseEnter={hoverEnter}
+            onMouseLeave={hoverLeave}
           />
+          <Audios src={AkoVoice} />
         </Overlay>
         <p>
           Amau Ako / <span className='small'>天雨アコ</span>
@@ -36,7 +36,6 @@ function App() {
           rel='noopener noreferrer'>
           Gehenna Academy!
         </a>
-        {isShown && <audio src={AkoVoice} autoPlay loop />}
       </header>
     </div>
   );
