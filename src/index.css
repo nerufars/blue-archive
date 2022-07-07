@@ -56,6 +56,7 @@ code {
 
 .overlay {
   overflow: hidden;
+  
   position: relative;
   background: rgb(71, 71, 245);
   z-index: 10000000;
@@ -64,12 +65,14 @@ code {
 
 .ako {
   position: relative;
+  overflow-y: scroll;
   display: inline;
-  z-index: -100;
+  z-index: 100;
   transition: all 500ms;
   transform-origin: center;
 }
 
 .ako:hover {
+  overflow-y: scroll;
   transform: scale(1.4);
 }

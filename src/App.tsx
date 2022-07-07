@@ -6,8 +6,11 @@ import AkoVoice from './assets/audio/Ako_kawai.mp3';
 const Ako = require('./assets/images/ako.jpg');
 const link = process.env.REACT_APP_URL_AKO;
 
+
+
 function App() {
   const [isShown, setIsShown] = useState<boolean>(false);
+ 
 
   return (
     <div className='App'>
