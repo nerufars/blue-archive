@@ -7,7 +7,7 @@ interface Props {
   style?: React.CSSProperties;
 }
 
-// Hooks 
+// Hooks
 export const useShareState = () => {
   const [showAudio, setShowAudio] = useState<boolean>(false);
 
