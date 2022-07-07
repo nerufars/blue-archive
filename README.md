@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Character Blue Archive
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was list character in Blue Archive
 
 ## Available Scripts
 
